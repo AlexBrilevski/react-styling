@@ -1,7 +1,7 @@
 import logo from '../assets/logo.png';
 import { styled } from 'styled-components';
 
-const StyledHeader = styled.header`
+const _StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,10 +44,12 @@ const StyledHeader = styled.header`
 
 export default function Header() {
   return (
-    <StyledHeader>
-      <img src={logo} alt="A canvas" />
-      <h1>ReactArt</h1>
-      <p>A community of artists and art-lovers.</p>
-    </StyledHeader>
+    <header className="flex flex-col justify-center items-center mt-8 mb-8 md:mb-16">
+      <img src={logo} alt="A canvas" className="w-44 h-44 mb-8 object-contain" />
+      <h1 className="font-title text-amber-800 text-2xl md:text-4xl font-semibold text-center uppercase tracking-widest">
+        ReactArt
+      </h1>
+      <p className="text-stone-500">A community of artists and art-lovers.</p>
+    </header>
   );
 }

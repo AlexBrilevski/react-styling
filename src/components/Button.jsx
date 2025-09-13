@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-const Button = styled.button`
+const _Button = styled.button`
   padding: 1rem 2rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -15,4 +15,10 @@ const Button = styled.button`
   }
 `;
 
-export default Button;
+export default function Button({ children, ...props }) {
+  return (
+    <button className="px-4 py-2 bg-amber-400 hover:bg-amber-500 text-stone-500 font-semibold uppercase rounded" {...props}>
+      {children}
+    </button>
+  );
+};
