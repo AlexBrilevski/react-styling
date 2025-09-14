@@ -17,7 +17,7 @@ const _Button = styled.button`
 
 export default function Button({ children, ...props }) {
   return (
-    <button className="px-4 py-2 bg-amber-400 hover:bg-amber-500 text-stone-500 font-semibold uppercase rounded" {...props}>
+    <button className="px-4 py-2 bg-amber-400 hover:bg-amber-500 text-stone-800 font-semibold uppercase rounded" {...props}>
       {children}
     </button>
   );
